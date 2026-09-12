@@ -14,7 +14,7 @@ import com.catneye.asterisk.AMI.syncactons.SyncAction;
 import com.catneye.asterisk.Events.AsteriskListener;
 import com.catneye.asterisk.Exception.AMIConnectException;
 import com.catneye.asterisk.utils.DateUtils;
-import com.catneye.util.NetUtils;
+import com.catneye.asterisk.utils.NetUtils;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
