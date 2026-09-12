@@ -5,7 +5,7 @@
  */
 package com.catneye.asterisk.utils;
 
-import com.catneye.exception.WrongDateException;
+import com.catneye.asterisk.Exception.WrongDateException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
