@@ -50,12 +50,8 @@ public class Getvar implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (variable != null) {
-            message.append("Variable: ").append(variable).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("Variable: ").append(variable).append("\r\n");
         return message.toString();
     }
 }
