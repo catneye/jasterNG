@@ -33,9 +33,9 @@ public class MessageWaiting extends ChannelEvent implements Serializable {
     private Boolean waiting;
     public Boolean getWaiting() { return waiting; }
     public void setWaiting(Boolean waiting) { this.waiting = waiting; }
-    private Integer new;
-    public Integer getNew() { return new; }
-    public void setNew(Integer new) { this.new = new; }
+    private Integer mew;
+    public Integer getNew() { return mew; }
+    public void setNew(Integer mew) { this.mew = mew; }
     private Integer old;
     public Integer getOld() { return old; }
     public void setOld(Integer old) { this.old = old; }
