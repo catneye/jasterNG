@@ -60,15 +60,9 @@ public class SendText implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (message != null) {
-            message.append("Message: ").append(message).append("\r\n");
-        }
-        if (contentType != null) {
-            message.append("Content-Type: ").append(contentType).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("Message: ").append(message).append("\r\n");
+        message.append("Content-Type: ").append(contentType).append("\r\n");
         return message.toString();
     }
 }
