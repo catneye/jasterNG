@@ -25,8 +25,8 @@ public class QueueMemberRemoved extends SystemEvent implements Serializable {
     public String getMemberName() { return memberName; }
     public void setMemberName(String memberName) { this.memberName = memberName; }
 
-    private String interface;
-    public String getInterface() { return interface; }
-    public void setInterface(String interface) { this.interface = interface; }
+    private String interfaze;
+    public String getInterface() { return interfaze; }
+    public void setInterface(String interfaze) { this.interfaze = interfaze; }
 
 }
