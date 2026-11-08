@@ -260,11 +260,14 @@ public class AMIThread extends Thread {
         String normalized = name.toLowerCase(java.util.Locale.ROOT)
                 .replaceAll("[^a-z0-9]", "");
 
-        return switch (normalized) {
-            case "clazz" -> "class";
-            case "interfaze" -> "interface";
-            default -> normalized;
-        };
+        switch (normalized) {
+            case "clazz":
+                return "class";
+            case "interfaze":
+                return "interface";
+            default:
+                return normalized;
+        }
     }
 
     private void parseEvent(List<String> lines) {
@@ -286,12 +289,18 @@ public class AMIThread extends Thread {
                         String tlline = StringUtils.trim(lline[1]);
                         switch (lline[0]) {
                             case "Event":
-                                String eventClassName = switch (tlline) {
-                                    case "AOC-D" -> "AocD";
-                                    case "AOC-E" -> "AocE";
-                                    case "AOC-S" -> "AocS";
-                                    default -> tlline;
-                                };
+                                String eventClassName = tlline;
+                                switch (tlline) {
+                                    case "AOC-D":
+                                        eventClassName = "AocD";
+                                        break;
+                                    case "AOC-E":
+                                        eventClassName = "AocE";
+                                        break;
+                                    case "AOC-S":
+                                        eventClassName = "AocS";
+                                        break;
+                                }
                                 c = Class.forName("com.catneye.asterisk.AMI.events." + eventClassName);
                                 isEvent = true;
                                 break;
