@@ -42,9 +42,9 @@ public class MailboxStateChange implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(mailbox!=null)m.append("Mailbox: ").append(mailbox).append("\r\n");
- if(newMessages!=null)m.append("NewMessages: ").append(newMessages).append("\r\n");
- if(oldMessages!=null)m.append("OldMessages: ").append(oldMessages).append("\r\n");
- if(entityID!=null)m.append("EntityID: ").append(entityID).append("\r\n");
+ m.append("Mailbox: ").append(mailbox).append("\r\n");
+ m.append("NewMessages: ").append(newMessages).append("\r\n");
+ m.append("OldMessages: ").append(oldMessages).append("\r\n");
+ m.append("EntityID: ").append(entityID).append("\r\n");
  return m.toString();}
 }
