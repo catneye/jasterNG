@@ -39,8 +39,8 @@ public class Bridge implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel1!=null)m.append("Channel1: ").append(channel1).append("\r\n");
- if(channel2!=null)m.append("Channel2: ").append(channel2).append("\r\n");
- if(tone!=null)m.append("Tone: ").append(tone).append("\r\n");
+ m.append("Channel1: ").append(channel1).append("\r\n");
+ m.append("Channel2: ").append(channel2).append("\r\n");
+ m.append("Tone: ").append(tone).append("\r\n");
  return m.toString();}
 }
