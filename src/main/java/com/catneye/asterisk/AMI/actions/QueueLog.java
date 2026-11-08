@@ -10,9 +10,9 @@ public class QueueLog implements Action {
  private String event;
  public String getEvent(){return event;}
  public void setEvent(String event){this.event=event;}
- private String interface;
- public String getInterface(){return interface;}
- public void setInterface(String interface){this.interface=interface;}
+ private String queueInterface;
+ public String getInterface(){return queueInterface;}
+ public void setInterface(String queueInterface){this.queueInterface=queueInterface;}
  private String uniqueid;
  public String getUniqueid(){return uniqueid;}
  public void setUniqueid(String uniqueid){this.uniqueid=uniqueid;}
@@ -26,7 +26,7 @@ public class QueueLog implements Action {
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
  if(queuename!=null)m.append("Queue: ").append(queuename).append("\r\n");
  if(event!=null)m.append("Event: ").append(event).append("\r\n");
- if(interface!=null)m.append("Interface: ").append(interface).append("\r\n");
+ if(queueInterface!=null)m.append("Interface: ").append(queueInterface).append("\r\n");
  if(uniqueid!=null)m.append("Uniqueid: ").append(uniqueid).append("\r\n");
  if(message!=null)m.append("Message: ").append(message).append("\r\n");
  return m.toString();}

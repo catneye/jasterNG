@@ -1,5 +1,5 @@
 /*
- * jasterNG - Java interface for Asterisk
+ * jasterNG - Java queueInterface for Asterisk
  * Copyright (C) 2026 Kurchenko O.E.
  *
  * This file is part of jasterNG and is distributed under the GNU General Public License, version 2.
@@ -24,14 +24,14 @@ public class QueueAdd implements Action {
         this.queue = queue;
     }
 
-    private String interface;
+    private String queueInterface;
 
     public String getInterface() {
-        return interface;
+        return queueInterface;
     }
 
-    public void setInterface(String interface) {
-        this.interface = interface;
+    public void setInterface(String queueInterface) {
+        this.queueInterface = queueInterface;
     }
 
     private Integer penalty;
@@ -102,8 +102,8 @@ public class QueueAdd implements Action {
         if (queue != null) {
             message.append("Queue: ").append(queue).append("\r\n");
         }
-        if (interface != null) {
-            message.append("Interface: ").append(interface).append("\r\n");
+        if (queueInterface != null) {
+            message.append("Interface: ").append(queueInterface).append("\r\n");
         }
         if (penalty != null) {
             message.append("Penalty: ").append(penalty).append("\r\n");
