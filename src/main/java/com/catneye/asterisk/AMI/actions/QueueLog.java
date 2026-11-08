@@ -45,10 +45,10 @@ public class QueueLog implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(queuename!=null)m.append("Queue: ").append(queuename).append("\r\n");
- if(event!=null)m.append("Event: ").append(event).append("\r\n");
- if(queueInterface!=null)m.append("Interface: ").append(queueInterface).append("\r\n");
- if(uniqueid!=null)m.append("Uniqueid: ").append(uniqueid).append("\r\n");
- if(message!=null)m.append("Message: ").append(message).append("\r\n");
+ m.append("Queue: ").append(queuename).append("\r\n");
+ m.append("Event: ").append(event).append("\r\n");
+ m.append("Interface: ").append(queueInterface).append("\r\n");
+ m.append("Uniqueid: ").append(uniqueid).append("\r\n");
+ m.append("Message: ").append(message).append("\r\n");
  return m.toString();}
 }
