@@ -29,16 +29,6 @@ public class CoreShowChannel extends ChannelEvent implements Serializable {
         this.actionID = actionID;
     }
 
-    private String actionID;
-
-    public String getActionID() {
-        return actionID;
-    }
-
-    public void setActionID(String actionID) {
-        this.actionID = actionID;
-    }
-
     private String bridgeId;
 
     public String getBridgeId() {
