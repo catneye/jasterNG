@@ -45,10 +45,10 @@ public class VoicemailMove implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(context!=null)m.append("Context: ").append(context).append("\r\n");
- if(mailbox!=null)m.append("Mailbox: ").append(mailbox).append("\r\n");
- if(folder!=null)m.append("Folder: ").append(folder).append("\r\n");
- if(messages!=null)m.append("Messages: ").append(messages).append("\r\n");
- if(destinationFolder!=null)m.append("DestinationFolder: ").append(destinationFolder).append("\r\n");
+ m.append("Context: ").append(context).append("\r\n");
+ m.append("Mailbox: ").append(mailbox).append("\r\n");
+ m.append("Folder: ").append(folder).append("\r\n");
+ m.append("Messages: ").append(messages).append("\r\n");
+ m.append("DestinationFolder: ").append(destinationFolder).append("\r\n");
  return m.toString();}
 }

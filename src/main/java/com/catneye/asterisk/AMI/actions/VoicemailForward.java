@@ -51,12 +51,12 @@ public class VoicemailForward implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(context!=null)m.append("Context: ").append(context).append("\r\n");
- if(mailbox!=null)m.append("Mailbox: ").append(mailbox).append("\r\n");
- if(folder!=null)m.append("Folder: ").append(folder).append("\r\n");
- if(messages!=null)m.append("Messages: ").append(messages).append("\r\n");
- if(destinationContext!=null)m.append("DestinationContext: ").append(destinationContext).append("\r\n");
- if(destinationMailbox!=null)m.append("DestinationMailbox: ").append(destinationMailbox).append("\r\n");
- if(delete!=null)m.append("Delete: ").append(delete).append("\r\n");
+ m.append("Context: ").append(context).append("\r\n");
+ m.append("Mailbox: ").append(mailbox).append("\r\n");
+ m.append("Folder: ").append(folder).append("\r\n");
+ m.append("Messages: ").append(messages).append("\r\n");
+ m.append("DestinationContext: ").append(destinationContext).append("\r\n");
+ m.append("DestinationMailbox: ").append(destinationMailbox).append("\r\n");
+ m.append("Delete: ").append(delete).append("\r\n");
  return m.toString();}
 }
