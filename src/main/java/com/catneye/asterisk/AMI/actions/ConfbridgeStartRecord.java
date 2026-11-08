@@ -36,7 +36,7 @@ public class ConfbridgeStartRecord implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(conference!=null)m.append("Conference").append(": ").append(conference).append("\r\n");
- if(recordFile!=null)m.append("RecordFile").append(": ").append(recordFile).append("\r\n");
+ m.append("Conference").append(": ").append(conference).append("\r\n");
+ m.append("RecordFile").append(": ").append(recordFile).append("\r\n");
  return m.toString();}
 }
