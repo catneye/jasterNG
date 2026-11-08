@@ -256,22 +256,6 @@ public class AMIThread extends Thread {
         //}
     }
 
-    private String normalizeFieldName(String name) {
-        String normalized = name.toLowerCase(java.util.Locale.ROOT)
-                .replaceAll("[^a-z0-9]", "");
-
-        switch (normalized) {
-            case "clazz":
-                return "class";
-            case "interfaze":
-                return "interface";
-            case "100rel":
-                return "rel100";
-            default:
-                return normalized;
-        }
-    }
-
     private void parseEvent(List<String> lines) {
         int i = 0;
         int fc = 0;
@@ -340,8 +324,17 @@ public class AMIThread extends Thread {
                             fc = fields.size();*/
 
                             for (Field field : fields) {
-                                String clearName = normalizeFieldName(field.getName());
-                                if (clearName.equals(normalizeFieldName(lline[0]))) {
+                                String clearName = field.getName().toLowerCase().replace("[^A-Za-z0-9]", "");
+                                if (clearName.equals("clazz")) {
+                                    clearName = "class";
+                                }
+                                if (clearName.equals("interfaze")) {
+                                    clearName = "interface";
+                                }
+                                if (clearName.equals("causeTxt")) {
+                                    clearName = "Cause-txt";
+                                }
+                                if (clearName.equals(lline[0].toLowerCase())) {
                                     Logger.getLogger(AMIThread.class.getName()).log(Level.FINE, "parseEvent clearName: {0}", clearName);
                                     Logger.getLogger(AMIThread.class.getName()).log(Level.FINE, "parseEvent FieldType: {0}", field.getType().getName());
                                     field.setAccessible(true);
