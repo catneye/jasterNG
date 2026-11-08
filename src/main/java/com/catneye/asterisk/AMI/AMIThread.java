@@ -256,6 +256,17 @@ public class AMIThread extends Thread {
         //}
     }
 
+    private String normalizeFieldName(String name) {
+        String normalized = name.toLowerCase(java.util.Locale.ROOT)
+                .replaceAll("[^a-z0-9]", "");
+
+        return switch (normalized) {
+            case "clazz" -> "class";
+            case "interfaze" -> "interface";
+            default -> normalized;
+        };
+    }
+
     private void parseEvent(List<String> lines) {
         int i = 0;
         int fc = 0;
@@ -275,7 +286,13 @@ public class AMIThread extends Thread {
                         String tlline = StringUtils.trim(lline[1]);
                         switch (lline[0]) {
                             case "Event":
-                                c = Class.forName("com.catneye.asterisk.AMI.events." + tlline);
+                                String eventClassName = switch (tlline) {
+                                    case "AOC-D" -> "AocD";
+                                    case "AOC-E" -> "AocE";
+                                    case "AOC-S" -> "AocS";
+                                    default -> tlline;
+                                };
+                                c = Class.forName("com.catneye.asterisk.AMI.events." + eventClassName);
                                 isEvent = true;
                                 break;
                             case "Response":
@@ -312,17 +329,8 @@ public class AMIThread extends Thread {
                             fc = fields.size();*/
 
                             for (Field field : fields) {
-                                String clearName = field.getName().toLowerCase().replace("[^A-Za-z0-9]", "");
-                                if (clearName.equals("clazz")) {
-                                    clearName = "class";
-                                }
-                                if (clearName.equals("interfaze")) {
-                                    clearName = "interface";
-                                }
-                                if (clearName.equals("causeTxt")) {
-                                    clearName = "Cause-txt";
-                                }
-                                if (clearName.equals(lline[0].toLowerCase())) {
+                                String clearName = normalizeFieldName(field.getName());
+                                if (clearName.equals(normalizeFieldName(lline[0]))) {
                                     Logger.getLogger(AMIThread.class.getName()).log(Level.FINE, "parseEvent clearName: {0}", clearName);
                                     Logger.getLogger(AMIThread.class.getName()).log(Level.FINE, "parseEvent FieldType: {0}", field.getType().getName());
                                     field.setAccessible(true);
