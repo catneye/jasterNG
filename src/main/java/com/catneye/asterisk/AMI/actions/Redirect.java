@@ -110,30 +110,14 @@ public class Redirect implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (extraChannel != null) {
-            message.append("ExtraChannel: ").append(extraChannel).append("\r\n");
-        }
-        if (exten != null) {
-            message.append("Exten: ").append(exten).append("\r\n");
-        }
-        if (extraExten != null) {
-            message.append("ExtraExten: ").append(extraExten).append("\r\n");
-        }
-        if (context != null) {
-            message.append("Context: ").append(context).append("\r\n");
-        }
-        if (extraContext != null) {
-            message.append("ExtraContext: ").append(extraContext).append("\r\n");
-        }
-        if (priority != null) {
-            message.append("Priority: ").append(priority).append("\r\n");
-        }
-        if (extraPriority != null) {
-            message.append("ExtraPriority: ").append(extraPriority).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("ExtraChannel: ").append(extraChannel).append("\r\n");
+        message.append("Exten: ").append(exten).append("\r\n");
+        message.append("ExtraExten: ").append(extraExten).append("\r\n");
+        message.append("Context: ").append(context).append("\r\n");
+        message.append("ExtraContext: ").append(extraContext).append("\r\n");
+        message.append("Priority: ").append(priority).append("\r\n");
+        message.append("ExtraPriority: ").append(extraPriority).append("\r\n");
         return message.toString();
     }
 }

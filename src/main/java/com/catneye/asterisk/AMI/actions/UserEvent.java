@@ -36,7 +36,7 @@ public class UserEvent implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(event!=null)m.append("UserEvent: ").append(event).append("\r\n");
- if(header!=null)m.append("Header: ").append(header).append("\r\n");
+ m.append("UserEvent: ").append(event).append("\r\n");
+ m.append("Header: ").append(header).append("\r\n");
  return m.toString();}
 }

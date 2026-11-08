@@ -36,7 +36,7 @@ public class PJSIPSetMaintenance implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(endpoint!=null)m.append("Endpoint: ").append(endpoint).append("\r\n");
- if(maintenance!=null)m.append("Maintenance: ").append(maintenance).append("\r\n");
+ m.append("Endpoint: ").append(endpoint).append("\r\n");
+ m.append("Maintenance: ").append(maintenance).append("\r\n");
  return m.toString();}
 }

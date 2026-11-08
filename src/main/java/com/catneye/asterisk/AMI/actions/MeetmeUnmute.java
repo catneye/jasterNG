@@ -36,7 +36,7 @@ public class MeetmeUnmute implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(conference!=null)m.append("Conference: ").append(conference).append("\r\n");
- if(usernum!=null)m.append("Usernum: ").append(usernum).append("\r\n");
+ m.append("Conference: ").append(conference).append("\r\n");
+ m.append("Usernum: ").append(usernum).append("\r\n");
  return m.toString();}
 }

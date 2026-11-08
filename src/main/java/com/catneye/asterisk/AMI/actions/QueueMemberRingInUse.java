@@ -39,8 +39,8 @@ public class QueueMemberRingInUse implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(queueInterface!=null)m.append("Interface: ").append(queueInterface).append("\r\n");
- if(ringinuse!=null)m.append("Ringinuse: ").append(ringinuse).append("\r\n");
- if(queue!=null)m.append("Queue: ").append(queue).append("\r\n");
+ m.append("Interface: ").append(queueInterface).append("\r\n");
+ m.append("Ringinuse: ").append(ringinuse).append("\r\n");
+ m.append("Queue: ").append(queue).append("\r\n");
  return m.toString();}
 }

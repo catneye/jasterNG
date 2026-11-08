@@ -48,11 +48,11 @@ public class DialplanExtensionAdd implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(context!=null)m.append("Context: ").append(context).append("\r\n");
- if(extension!=null)m.append("Extension: ").append(extension).append("\r\n");
- if(priority!=null)m.append("Priority: ").append(priority).append("\r\n");
- if(application!=null)m.append("Application: ").append(application).append("\r\n");
- if(appData!=null)m.append("ApplicationData: ").append(appData).append("\r\n");
- if(replace!=null)m.append("Replace: ").append(replace).append("\r\n");
+ m.append("Context: ").append(context).append("\r\n");
+ m.append("Extension: ").append(extension).append("\r\n");
+ m.append("Priority: ").append(priority).append("\r\n");
+ m.append("Application: ").append(application).append("\r\n");
+ m.append("ApplicationData: ").append(appData).append("\r\n");
+ m.append("Replace: ").append(replace).append("\r\n");
  return m.toString();}
 }

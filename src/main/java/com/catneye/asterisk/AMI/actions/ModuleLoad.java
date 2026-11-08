@@ -36,7 +36,7 @@ public class ModuleLoad implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(module!=null)m.append("Module: ").append(module).append("\r\n");
- if(loadType!=null)m.append("LoadType: ").append(loadType).append("\r\n");
+ m.append("Module: ").append(module).append("\r\n");
+ m.append("LoadType: ").append(loadType).append("\r\n");
  return m.toString();}
 }

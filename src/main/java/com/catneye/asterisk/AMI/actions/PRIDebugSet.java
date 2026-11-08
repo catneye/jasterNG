@@ -36,7 +36,7 @@ public class PRIDebugSet implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(span!=null)m.append("Span: ").append(span).append("\r\n");
- if(level!=null)m.append("Level: ").append(level).append("\r\n");
+ m.append("Span: ").append(span).append("\r\n");
+ m.append("Level: ").append(level).append("\r\n");
  return m.toString();}
 }

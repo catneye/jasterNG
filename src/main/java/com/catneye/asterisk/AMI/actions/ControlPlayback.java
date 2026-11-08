@@ -60,15 +60,15 @@ public class ControlPlayback implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel").append(": ").append(channel).append("\r\n");
- if(control!=null)m.append("Control").append(": ").append(control).append("\r\n");
- if(skipms!=null)m.append("Skipms").append(": ").append(skipms).append("\r\n");
- if(forward!=null)m.append("Forward").append(": ").append(forward).append("\r\n");
- if(rewind!=null)m.append("Rewind").append(": ").append(rewind).append("\r\n");
- if(pause!=null)m.append("Pause").append(": ").append(pause).append("\r\n");
- if(stop!=null)m.append("Stop").append(": ").append(stop).append("\r\n");
- if(restart!=null)m.append("Restart").append(": ").append(restart).append("\r\n");
- if(start!=null)m.append("Start").append(": ").append(start).append("\r\n");
- if(offset!=null)m.append("Offset").append(": ").append(offset).append("\r\n");
+ m.append("Channel").append(": ").append(channel).append("\r\n");
+ m.append("Control").append(": ").append(control).append("\r\n");
+ m.append("Skipms").append(": ").append(skipms).append("\r\n");
+ m.append("Forward").append(": ").append(forward).append("\r\n");
+ m.append("Rewind").append(": ").append(rewind).append("\r\n");
+ m.append("Pause").append(": ").append(pause).append("\r\n");
+ m.append("Stop").append(": ").append(stop).append("\r\n");
+ m.append("Restart").append(": ").append(restart).append("\r\n");
+ m.append("Start").append(": ").append(start).append("\r\n");
+ m.append("Offset").append(": ").append(offset).append("\r\n");
  return m.toString();}
 }

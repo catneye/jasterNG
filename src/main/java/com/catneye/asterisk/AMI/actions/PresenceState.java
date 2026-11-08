@@ -42,9 +42,9 @@ public class PresenceState implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(provider!=null)m.append("Provider: ").append(provider).append("\r\n");
- if(state!=null)m.append("State: ").append(state).append("\r\n");
- if(subtype!=null)m.append("Subtype: ").append(subtype).append("\r\n");
- if(message!=null)m.append("Message: ").append(message).append("\r\n");
+ m.append("Provider: ").append(provider).append("\r\n");
+ m.append("State: ").append(state).append("\r\n");
+ m.append("Subtype: ").append(subtype).append("\r\n");
+ m.append("Message: ").append(message).append("\r\n");
  return m.toString();}
 }

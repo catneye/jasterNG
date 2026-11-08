@@ -42,9 +42,9 @@ public class QueuePause implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(queueInterface!=null)m.append("Interface: ").append(queueInterface).append("\r\n");
- if(paused!=null)m.append("Paused: ").append(paused).append("\r\n");
- if(queue!=null)m.append("Queue: ").append(queue).append("\r\n");
- if(reason!=null)m.append("Reason: ").append(reason).append("\r\n");
+ m.append("Interface: ").append(queueInterface).append("\r\n");
+ m.append("Paused: ").append(paused).append("\r\n");
+ m.append("Queue: ").append(queue).append("\r\n");
+ m.append("Reason: ").append(reason).append("\r\n");
  return m.toString();}
 }

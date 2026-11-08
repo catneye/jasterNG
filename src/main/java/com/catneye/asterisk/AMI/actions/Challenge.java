@@ -33,6 +33,6 @@ public class Challenge implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(authType!=null)m.append("AuthType: ").append(authType).append("\r\n");
+ m.append("AuthType: ").append(authType).append("\r\n");
  return m.toString();}
 }

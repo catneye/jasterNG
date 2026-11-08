@@ -36,7 +36,7 @@ public class AgentLogoff implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(agent!=null)m.append("Agent: ").append(agent).append("\r\n");
- if(soft!=null)m.append("Soft: ").append(soft).append("\r\n");
+ m.append("Agent: ").append(agent).append("\r\n");
+ m.append("Soft: ").append(soft).append("\r\n");
  return m.toString();}
 }

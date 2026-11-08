@@ -51,12 +51,12 @@ public class UpdateConfig implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(srcFilename!=null)m.append("SrcFilename: ").append(srcFilename).append("\r\n");
- if(dstFilename!=null)m.append("DstFilename: ").append(dstFilename).append("\r\n");
- if(action!=null)m.append("Action: ").append(action).append("\r\n");
- if(category!=null)m.append("Category: ").append(category).append("\r\n");
- if(variable!=null)m.append("Variable: ").append(variable).append("\r\n");
- if(value!=null)m.append("Value: ").append(value).append("\r\n");
- if(match!=null)m.append("Match: ").append(match).append("\r\n");
+ m.append("SrcFilename: ").append(srcFilename).append("\r\n");
+ m.append("DstFilename: ").append(dstFilename).append("\r\n");
+ m.append("Action: ").append(action).append("\r\n");
+ m.append("Category: ").append(category).append("\r\n");
+ m.append("Variable: ").append(variable).append("\r\n");
+ m.append("Value: ").append(value).append("\r\n");
+ m.append("Match: ").append(match).append("\r\n");
  return m.toString();}
 }

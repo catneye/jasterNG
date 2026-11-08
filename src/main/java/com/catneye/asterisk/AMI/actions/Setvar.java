@@ -60,15 +60,9 @@ public class Setvar implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (variable != null) {
-            message.append("Variable: ").append(variable).append("\r\n");
-        }
-        if (value != null) {
-            message.append("Value: ").append(value).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("Variable: ").append(variable).append("\r\n");
+        message.append("Value: ").append(value).append("\r\n");
         return message.toString();
     }
 }

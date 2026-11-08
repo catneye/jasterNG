@@ -80,15 +80,9 @@ public class QueuePenalty implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (queueInterface != null) {
-            message.append("Interface: ").append(queueInterface).append("\r\n");
-        }
-        if (penalty != null) {
-            message.append("Penalty: ").append(penalty).append("\r\n");
-        }
-        if (queue != null) {
-            message.append("Queue: ").append(queue).append("\r\n");
-        }
+        message.append("Interface: ").append(queueInterface).append("\r\n");
+        message.append("Penalty: ").append(penalty).append("\r\n");
+        message.append("Queue: ").append(queue).append("\r\n");
         return message.toString();
     }
 }

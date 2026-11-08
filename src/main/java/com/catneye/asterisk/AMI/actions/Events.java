@@ -33,6 +33,6 @@ public class Events implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(eventMask!=null)m.append("EventMask: ").append(eventMask).append("\r\n");
+ m.append("EventMask: ").append(eventMask).append("\r\n");
  return m.toString();}
 }

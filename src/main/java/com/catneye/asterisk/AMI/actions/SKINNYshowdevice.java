@@ -33,6 +33,6 @@ public class SKINNYshowdevice implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(device!=null)m.append("Device: ").append(device).append("\r\n");
+ m.append("Device: ").append(device).append("\r\n");
  return m.toString();}
 }

@@ -40,9 +40,9 @@ public class BlindTransfer implements Action {
  public void setAction(String action){this.action=action;}
  @Override public String toString(){
  StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel: ").append(channel).append("\r\n");
- if(context!=null)m.append("Context: ").append(context).append("\r\n");
- if(exten!=null)m.append("Exten: ").append(exten).append("\r\n");
+ m.append("Channel: ").append(channel).append("\r\n");
+ m.append("Context: ").append(context).append("\r\n");
+ m.append("Exten: ").append(exten).append("\r\n");
  return m.toString();
  }
 }

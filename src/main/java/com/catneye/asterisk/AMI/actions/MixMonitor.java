@@ -42,9 +42,9 @@ public class MixMonitor implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel: ").append(channel).append("\r\n");
- if(file!=null)m.append("File: ").append(file).append("\r\n");
- if(options!=null)m.append("Options: ").append(options).append("\r\n");
- if(command!=null)m.append("Command: ").append(command).append("\r\n");
+ m.append("Channel: ").append(channel).append("\r\n");
+ m.append("File: ").append(file).append("\r\n");
+ m.append("Options: ").append(options).append("\r\n");
+ m.append("Command: ").append(command).append("\r\n");
  return m.toString();}
 }

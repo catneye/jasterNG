@@ -120,27 +120,13 @@ public class QueueAdd implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (queue != null) {
-            message.append("Queue: ").append(queue).append("\r\n");
-        }
-        if (queueInterface != null) {
-            message.append("Interface: ").append(queueInterface).append("\r\n");
-        }
-        if (penalty != null) {
-            message.append("Penalty: ").append(penalty).append("\r\n");
-        }
-        if (paused != null) {
-            message.append("Paused: ").append(paused).append("\r\n");
-        }
-        if (reason != null) {
-            message.append("Reason: ").append(reason).append("\r\n");
-        }
-        if (memberName != null) {
-            message.append("MemberName: ").append(memberName).append("\r\n");
-        }
-        if (stateInterface != null) {
-            message.append("StateInterface: ").append(stateInterface).append("\r\n");
-        }
+        message.append("Queue: ").append(queue).append("\r\n");
+        message.append("Interface: ").append(queueInterface).append("\r\n");
+        message.append("Penalty: ").append(penalty).append("\r\n");
+        message.append("Paused: ").append(paused).append("\r\n");
+        message.append("Reason: ").append(reason).append("\r\n");
+        message.append("MemberName: ").append(memberName).append("\r\n");
+        message.append("StateInterface: ").append(stateInterface).append("\r\n");
         return message.toString();
     }
 }
