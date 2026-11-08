@@ -42,9 +42,9 @@ public class DeviceStateChange implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(device!=null)m.append("Device: ").append(device).append("\r\n");
- if(state!=null)m.append("State: ").append(state).append("\r\n");
- if(cachable!=null)m.append("Cachable: ").append(cachable).append("\r\n");
- if(entityID!=null)m.append("EntityID: ").append(entityID).append("\r\n");
+ m.append("Device: ").append(device).append("\r\n");
+ m.append("State: ").append(state).append("\r\n");
+ m.append("Cachable: ").append(cachable).append("\r\n");
+ m.append("EntityID: ").append(entityID).append("\r\n");
  return m.toString();}
 }
