@@ -33,6 +33,6 @@ public class ParkedCalls implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(parkingLot!=null)m.append("ParkingLot: ").append(parkingLot).append("\r\n");
+ m.append("ParkingLot: ").append(parkingLot).append("\r\n");
  return m.toString();}
 }

@@ -70,18 +70,10 @@ public class PlayDTMF implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (digit != null) {
-            message.append("Digit: ").append(digit).append("\r\n");
-        }
-        if (duration != null) {
-            message.append("Duration: ").append(duration).append("\r\n");
-        }
-        if (receive != null) {
-            message.append("Receive: ").append(receive).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("Digit: ").append(digit).append("\r\n");
+        message.append("Duration: ").append(duration).append("\r\n");
+        message.append("Receive: ").append(receive).append("\r\n");
         return message.toString();
     }
 }
