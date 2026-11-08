@@ -39,8 +39,8 @@ public class JabberSend implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(jabber!=null)m.append("Jabber: ").append(jabber).append("\r\n");
- if(screenName!=null)m.append("ScreenName: ").append(screenName).append("\r\n");
- if(message!=null)m.append("Message: ").append(message).append("\r\n");
+ m.append("Jabber: ").append(jabber).append("\r\n");
+ m.append("ScreenName: ").append(screenName).append("\r\n");
+ m.append("Message: ").append(message).append("\r\n");
  return m.toString();}
 }

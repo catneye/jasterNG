@@ -50,12 +50,8 @@ public class Hangup implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (channel != null) {
-            message.append("Channel: ").append(channel).append("\r\n");
-        }
-        if (cause != null) {
-            message.append("Cause: ").append(cause).append("\r\n");
-        }
+        message.append("Channel: ").append(channel).append("\r\n");
+        message.append("Cause: ").append(cause).append("\r\n");
         return message.toString();
     }
 }
