@@ -39,8 +39,8 @@ public class MuteAudio implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel: ").append(channel).append("\r\n");
- if(direction!=null)m.append("Direction: ").append(direction).append("\r\n");
- if(state!=null)m.append("State: ").append(state).append("\r\n");
+ m.append("Channel: ").append(channel).append("\r\n");
+ m.append("Direction: ").append(direction).append("\r\n");
+ m.append("State: ").append(state).append("\r\n");
  return m.toString();}
 }

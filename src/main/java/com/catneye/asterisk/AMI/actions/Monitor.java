@@ -42,9 +42,9 @@ public class Monitor implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel: ").append(channel).append("\r\n");
- if(file!=null)m.append("File: ").append(file).append("\r\n");
- if(format!=null)m.append("Format: ").append(format).append("\r\n");
- if(mix!=null)m.append("Mix: ").append(mix).append("\r\n");
+ m.append("Channel: ").append(channel).append("\r\n");
+ m.append("File: ").append(file).append("\r\n");
+ m.append("Format: ").append(format).append("\r\n");
+ m.append("Mix: ").append(mix).append("\r\n");
  return m.toString();}
 }
