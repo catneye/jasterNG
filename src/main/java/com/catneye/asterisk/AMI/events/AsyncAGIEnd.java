@@ -32,19 +32,11 @@ import java.util.UUID;
  */
 public class AsyncAGIEnd extends ChannelEvent implements Serializable {
 
-    private String env;
 
     public AsyncAGIEnd() {
         super.setEvent("AsyncAGIEnd");
         super.setUuid(UUID.randomUUID());
     }
 
-    public String getEnv() {
-        return env;
-    }
-
-    public void setEnv(String env) {
-        this.env = env;
-    }
 
 }
