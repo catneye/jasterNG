@@ -2,6 +2,7 @@
  * jasterNG - Java interface for Asterisk
  * Copyright (C) 2026 Kurchenko O.E.
  * Licensed under GNU General Public License, version 2.
+ * Modified by Kurchenko O.E. and OpenAI ChatGPT 2026-11-08.
  */
 package com.catneye.asterisk.AMI.events;
 
