@@ -33,6 +33,6 @@ public class PRIDebugFileSet implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(filename!=null)m.append("Filename: ").append(filename).append("\r\n");
+ m.append("Filename: ").append(filename).append("\r\n");
  return m.toString();}
 }
