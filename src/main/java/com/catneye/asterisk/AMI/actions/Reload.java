@@ -40,9 +40,7 @@ public class Reload implements Action {
         StringBuilder message = new StringBuilder();
         message.append("Action: ").append(getAction()).append("\r\n");
         message.append("ActionID: ").append(getUuid()).append("\r\n");
-        if (module != null) {
-            message.append("Module: ").append(module).append("\r\n");
-        }
+        message.append("Module: ").append(module).append("\r\n");
         return message.toString();
     }
 }
