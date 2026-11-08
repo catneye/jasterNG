@@ -36,7 +36,7 @@ public class SorceryMemoryCacheStale implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(cache!=null)m.append("Cache: ").append(cache).append("\r\n");
- if(object!=null)m.append("Object: ").append(object).append("\r\n");
+ m.append("Cache: ").append(cache).append("\r\n");
+ m.append("Object: ").append(object).append("\r\n");
  return m.toString();}
 }

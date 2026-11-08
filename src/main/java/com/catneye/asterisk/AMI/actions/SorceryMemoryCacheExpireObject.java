@@ -39,8 +39,8 @@ public class SorceryMemoryCacheExpireObject implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(cache!=null)m.append("Cache: ").append(cache).append("\r\n");
- if(objectType!=null)m.append("ObjectType: ").append(objectType).append("\r\n");
- if(objectId!=null)m.append("ObjectId: ").append(objectId).append("\r\n");
+ m.append("Cache: ").append(cache).append("\r\n");
+ m.append("ObjectType: ").append(objectType).append("\r\n");
+ m.append("ObjectId: ").append(objectId).append("\r\n");
  return m.toString();}
 }
