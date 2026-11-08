@@ -17,7 +17,7 @@
  * You should have received a copy of the GNU General Public License
  * along with jasterNG. If not, see <https://www.gnu.org/licenses/>.
  *
- * Modified by Kurchenko O.E. 2026-09-12.
+ * Modified by Kurchenko O.E. and OpenAI ChatGPT 2026-11-08.
  */
 package com.catneye.asterisk.AMI;
 
