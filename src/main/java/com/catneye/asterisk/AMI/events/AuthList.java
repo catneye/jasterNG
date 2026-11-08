@@ -88,13 +88,13 @@ public class AuthList extends SystemEvent implements Serializable {
         this.password = password;
     }
 
-    private String nonceLifetime;
+    private Integer nonceLifetime;
 
-    public String getNonceLifetime() {
+    public Integer getNonceLifetime() {
         return nonceLifetime;
     }
 
-    public void setNonceLifetime(String nonceLifetime) {
+    public void setNonceLifetime(Integer nonceLifetime) {
         this.nonceLifetime = nonceLifetime;
     }
 
