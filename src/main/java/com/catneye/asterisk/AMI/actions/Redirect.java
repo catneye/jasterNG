@@ -1,16 +1,18 @@
 /*
  * jasterNG - Java interface for Asterisk
  * Copyright (C) 2026 Kurchenko O.E.
+ *
  * This file is part of jasterNG and is distributed under the GNU General Public License, version 2.
  */
 package com.catneye.asterisk.AMI.actions;
 
-/** AMI Redirect action. */
-public class Redirect extends AbstractAction {
+import java.util.UUID;
 
-    public Redirect() {
-        super("Redirect");
-    }
+/** AMI Redirect action. */
+public class Redirect implements Action {
+
+    private final UUID uuid = UUID.randomUUID();
+    private final String action = "Redirect";
 
     private String channel;
 
@@ -93,16 +95,44 @@ public class Redirect extends AbstractAction {
     }
 
     @Override
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public String getAction() {
+        return action;
+    }
+
+    @Override
     public String toString() {
-        StringBuilder message = startMessage();
-        appendField(message, "Channel", channel);
-        appendField(message, "ExtraChannel", extraChannel);
-        appendField(message, "Exten", exten);
-        appendField(message, "ExtraExten", extraExten);
-        appendField(message, "Context", context);
-        appendField(message, "ExtraContext", extraContext);
-        appendField(message, "Priority", priority);
-        appendField(message, "ExtraPriority", extraPriority);
+        StringBuilder message = new StringBuilder();
+        message.append("Action: ").append(getAction()).append("\r\n");
+        message.append("ActionID: ").append(getUuid()).append("\r\n");
+        if (channel != null) {
+            message.append("Channel: ").append(channel).append("\r\n");
+        }
+        if (extraChannel != null) {
+            message.append("ExtraChannel: ").append(extraChannel).append("\r\n");
+        }
+        if (exten != null) {
+            message.append("Exten: ").append(exten).append("\r\n");
+        }
+        if (extraExten != null) {
+            message.append("ExtraExten: ").append(extraExten).append("\r\n");
+        }
+        if (context != null) {
+            message.append("Context: ").append(context).append("\r\n");
+        }
+        if (extraContext != null) {
+            message.append("ExtraContext: ").append(extraContext).append("\r\n");
+        }
+        if (priority != null) {
+            message.append("Priority: ").append(priority).append("\r\n");
+        }
+        if (extraPriority != null) {
+            message.append("ExtraPriority: ").append(extraPriority).append("\r\n");
+        }
         return message.toString();
     }
 }

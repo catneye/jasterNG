@@ -1,16 +1,18 @@
 /*
  * jasterNG - Java interface for Asterisk
  * Copyright (C) 2026 Kurchenko O.E.
+ *
  * This file is part of jasterNG and is distributed under the GNU General Public License, version 2.
  */
 package com.catneye.asterisk.AMI.actions;
 
-/** AMI Setvar action. */
-public class Setvar extends AbstractAction {
+import java.util.UUID;
 
-    public Setvar() {
-        super("Setvar");
-    }
+/** AMI Setvar action. */
+public class Setvar implements Action {
+
+    private final UUID uuid = UUID.randomUUID();
+    private final String action = "Setvar";
 
     private String channel;
 
@@ -43,11 +45,29 @@ public class Setvar extends AbstractAction {
     }
 
     @Override
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public String getAction() {
+        return action;
+    }
+
+    @Override
     public String toString() {
-        StringBuilder message = startMessage();
-        appendField(message, "Channel", channel);
-        appendField(message, "Variable", variable);
-        appendField(message, "Value", value);
+        StringBuilder message = new StringBuilder();
+        message.append("Action: ").append(getAction()).append("\r\n");
+        message.append("ActionID: ").append(getUuid()).append("\r\n");
+        if (channel != null) {
+            message.append("Channel: ").append(channel).append("\r\n");
+        }
+        if (variable != null) {
+            message.append("Variable: ").append(variable).append("\r\n");
+        }
+        if (value != null) {
+            message.append("Value: ").append(value).append("\r\n");
+        }
         return message.toString();
     }
 }

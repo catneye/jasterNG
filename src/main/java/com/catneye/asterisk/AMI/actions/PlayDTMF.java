@@ -1,16 +1,18 @@
 /*
  * jasterNG - Java interface for Asterisk
  * Copyright (C) 2026 Kurchenko O.E.
+ *
  * This file is part of jasterNG and is distributed under the GNU General Public License, version 2.
  */
 package com.catneye.asterisk.AMI.actions;
 
-/** AMI PlayDTMF action. */
-public class PlayDTMF extends AbstractAction {
+import java.util.UUID;
 
-    public PlayDTMF() {
-        super("PlayDTMF");
-    }
+/** AMI PlayDTMF action. */
+public class PlayDTMF implements Action {
+
+    private final UUID uuid = UUID.randomUUID();
+    private final String action = "PlayDTMF";
 
     private String channel;
 
@@ -53,12 +55,32 @@ public class PlayDTMF extends AbstractAction {
     }
 
     @Override
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    @Override
+    public String getAction() {
+        return action;
+    }
+
+    @Override
     public String toString() {
-        StringBuilder message = startMessage();
-        appendField(message, "Channel", channel);
-        appendField(message, "Digit", digit);
-        appendField(message, "Duration", duration);
-        appendField(message, "Receive", receive);
+        StringBuilder message = new StringBuilder();
+        message.append("Action: ").append(getAction()).append("\r\n");
+        message.append("ActionID: ").append(getUuid()).append("\r\n");
+        if (channel != null) {
+            message.append("Channel: ").append(channel).append("\r\n");
+        }
+        if (digit != null) {
+            message.append("Digit: ").append(digit).append("\r\n");
+        }
+        if (duration != null) {
+            message.append("Duration: ").append(duration).append("\r\n");
+        }
+        if (receive != null) {
+            message.append("Receive: ").append(receive).append("\r\n");
+        }
         return message.toString();
     }
 }
