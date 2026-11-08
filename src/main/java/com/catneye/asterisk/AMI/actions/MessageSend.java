@@ -45,10 +45,10 @@ public class MessageSend implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(to!=null)m.append("To: ").append(to).append("\r\n");
- if(from!=null)m.append("From: ").append(from).append("\r\n");
- if(body!=null)m.append("Body: ").append(body).append("\r\n");
- if(base64body!=null)m.append("Base64Body: ").append(base64body).append("\r\n");
- if(variables!=null)m.append("Variable: ").append(variables).append("\r\n");
+ m.append("To: ").append(to).append("\r\n");
+ m.append("From: ").append(from).append("\r\n");
+ m.append("Body: ").append(body).append("\r\n");
+ m.append("Base64Body: ").append(base64body).append("\r\n");
+ m.append("Variable: ").append(variables).append("\r\n");
  return m.toString();}
 }
