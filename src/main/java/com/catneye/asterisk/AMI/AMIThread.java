@@ -265,6 +265,8 @@ public class AMIThread extends Thread {
                 return "class";
             case "interfaze":
                 return "interface";
+            case "100rel":
+                return "rel100";
             default:
                 return normalized;
         }

@@ -18,14 +18,14 @@ public class DNDState extends SystemEvent implements Serializable {
         super.setUuid(UUID.randomUUID());
     }
 
-    private String dahdiChannel;
+    private String DAHDIChannel;
 
-    public String getDahdiChannel() {
+    public String getDAHDIChannel() {
         return dahdiChannel;
     }
 
-    public void setDahdiChannel(String dahdiChannel) {
-        this.dahdiChannel = dahdiChannel;
+    public void setDAHDIChannel(String DAHDIChannel) {
+        this.DAHDIChannel = DAHDIChannel;
     }
 
     private String status;
