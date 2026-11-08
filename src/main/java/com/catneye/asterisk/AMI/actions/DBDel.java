@@ -36,7 +36,7 @@ public class DBDel implements Action {
  @Override public String getAction(){return action;}
  public void setAction(String action){this.action=action;}
  @Override public String toString(){StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(family!=null)m.append("Family: ").append(family).append("\r\n");
- if(key!=null)m.append("Key: ").append(key).append("\r\n");
+ m.append("Family: ").append(family).append("\r\n");
+ m.append("Key: ").append(key).append("\r\n");
  return m.toString();}
 }
