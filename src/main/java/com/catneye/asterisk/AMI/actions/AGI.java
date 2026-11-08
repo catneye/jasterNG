@@ -40,9 +40,9 @@ public class AGI implements Action {
  public void setAction(String action){this.action=action;}
  @Override public String toString(){
  StringBuilder m=new StringBuilder("Action: "+getAction()+"\r\nActionID: "+getUuid()+"\r\n");
- if(channel!=null)m.append("Channel: ").append(channel).append("\r\n");
- if(command!=null)m.append("Command: ").append(command).append("\r\n");
- if(commandID!=null)m.append("CommandID: ").append(commandID).append("\r\n");
+ m.append("Channel: ").append(channel).append("\r\n");
+ m.append("Command: ").append(command).append("\r\n");
+ m.append("CommandID: ").append(commandID).append("\r\n");
  return m.toString();
  }
 }
