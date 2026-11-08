@@ -331,6 +331,9 @@ public class AMIThread extends Thread {
                                 if (clearName.equals("interfaze")) {
                                     clearName = "interface";
                                 }
+                                if (clearName.equals("mew")) {
+                                    clearName = "new";
+                                }
                                 if (clearName.equals("causeTxt")) {
                                     clearName = "Cause-txt";
                                 }
