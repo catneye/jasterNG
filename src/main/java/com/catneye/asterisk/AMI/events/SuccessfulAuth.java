@@ -23,7 +23,6 @@ package com.catneye.asterisk.AMI.events;
 
 import com.catneye.asterisk.AMI.events.base.SecurityEvent;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.UUID;
 
 /**
@@ -38,7 +37,6 @@ public class SuccessfulAuth extends SecurityEvent implements Serializable {
     }
 
     private String usingPassword;
-    private LocalDateTime sessionTV;
 
     /*
     <-- Examining AMI event: -->
@@ -74,20 +72,6 @@ public class SuccessfulAuth extends SecurityEvent implements Serializable {
      */
     public void setUsingPassword(String usingPassword) {
         this.usingPassword = usingPassword;
-    }
-
-    /**
-     * @return the sessionTV
-     */
-    public LocalDateTime getSessionTV() {
-        return sessionTV;
-    }
-
-    /**
-     * @param sessionTV the sessionTV to set
-     */
-    public void setSessionTV(LocalDateTime sessionTV) {
-        this.sessionTV = sessionTV;
     }
 
 }

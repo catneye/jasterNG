@@ -37,6 +37,8 @@ public class SecurityEvent extends SystemEvent {
     private String sessionID;
     private String localAddress;
     private String remoteAddress;
+    private String module;
+    private LocalDateTime sessionTV;
 
     /**
      * @return the eventTV
@@ -148,5 +150,21 @@ public class SecurityEvent extends SystemEvent {
      */
     public void setRemoteAddress(String remoteAddress) {
         this.remoteAddress = remoteAddress;
+    }
+
+    public String getModule() {
+        return module;
+    }
+
+    public void setModule(String module) {
+        this.module = module;
+    }
+
+    public LocalDateTime getSessionTV() {
+        return sessionTV;
+    }
+
+    public void setSessionTV(LocalDateTime sessionTV) {
+        this.sessionTV = sessionTV;
     }
 }

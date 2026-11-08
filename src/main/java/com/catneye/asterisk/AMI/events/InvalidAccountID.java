@@ -32,7 +32,7 @@ import java.util.UUID;
 public class InvalidAccountID extends SecurityEvent implements Serializable {
 
     public InvalidAccountID() {
-        super.setEvent("ChallengeSent");
+        super.setEvent("InvalidAccountID");
         super.setUuid(UUID.randomUUID());
     }
 
